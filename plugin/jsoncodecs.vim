@@ -37,9 +37,9 @@ if !exists("*s:json_encode_basestring")
 endif
 
 if !exists("*b:json_dump")
-	function b:json_dump(lines)
+	function b:json_dump(linelist)
 		let json=[]
-		for line in a:lines
+		for line in a:linelist
 			call add(json, s:json_encode_basestring(line))
 		endfor
 		return printf('"%s"', join(json,'\n').'\n')
