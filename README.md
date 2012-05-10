@@ -21,7 +21,7 @@ It provide the following functions
 
 1. b:json_dump_string
  
-   This functions take a list contains line as input, output is a [json](http://json.org/) string
+   This functions take a list contains lines as input, output is a valid [JSON](http://json.org/) string
 
 2. b:json_dumplines
 
