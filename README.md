@@ -19,6 +19,12 @@ Use __g:loaded_jsoncodecs__ to check if jsoncodecs is loaded
     
 It provide the following functions
 
-1. b:json_dump
+1. b:json_dump_string
  
-   this functions take a list contains line as input, output is a json string
+   This functions take a list contains line as input, output is a [json](http://json.org/) string
+
+2. b:json_dumplines
+
+   A utility function print out the result from __json_dump_string__
+   
+       :1,$call b:json_dumplines()
