@@ -4,8 +4,9 @@
 "              http://www.ietf.org/rfc/rfc4627.txt?number=4627
 " Version: 1.0
 
+let g:loaded_jsoncodecs = 1
+
 if exists("b:did_jsoncodecs_plugin")
-	let b:did_jsoncodecs_plugin = 0
     finish
 else
 	let b:did_jsoncodecs_plugin = 1
@@ -36,8 +37,8 @@ if !exists("*s:json_encode_basestring")
 	endfunction
 endif
 
-if !exists("*b:json_dump")
-	function b:json_dump(linelist)
+if !exists("*b:json_dump_string")
+	function b:json_dump_string(linelist)
 		let json=[]
 		for line in a:linelist
 			call add(json, s:json_encode_basestring(line))
@@ -48,6 +49,6 @@ endif
 
 if !exists('*b:json_dumplines')
 	function b:json_dumplines() range
-		echo b:json_dump(getline(a:firstline,a:lastline))
+		echo b:json_dump_string(getline(a:firstline,a:lastline))
 	endfunction
 endif
