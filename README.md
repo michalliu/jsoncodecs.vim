@@ -13,12 +13,12 @@ Usage
 
 It provide the following functions
 
-1. b:json_dump_string
+1. jsoncodecs#dump_string
  
    This functions take a list contains lines as input, output is a valid [JSON](http://json.org/) string
 
-2. b:json_dumplines
+2. jsoncodecs#dump_lines
 
-   A utility function print out the result from __json_dump_string__
+   A utility function print out the result from __jsoncodecs#dump_string__
    
          :1,$call b:json_dumplines()
