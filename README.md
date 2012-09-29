@@ -1,22 +1,16 @@
 jsoncodecs
 ==========
 
-json library in vim script
+standard [JSON](http://json.org/) library of vim script
 
 Install
 ----------
 
-Copy jsoncodes.vim to __vimfiles/plugin__ of your Vim installation
+Copy jsoncodes.vim to __vimfiles/autoload__ of your Vim installation
 
 Usage
 ----------
 
-Use __g:loaded_jsoncodecs__ to check if jsoncodecs is loaded
-
-    if exists("g:loaded_jsoncodecs")
-        // do what you like
-    endif
-    
 It provide the following functions
 
 1. b:json_dump_string
